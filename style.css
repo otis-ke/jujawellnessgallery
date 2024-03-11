@@ -148,13 +148,13 @@ section {
 /* Responsive styles */
 @media (max-width: 768px) {
   .home-overlay {
-    height: 400px;
-    width: 500px;
+    height: 350px;
+    width: 400px;
   }
 
   .home-section{
-    height: 400px;
-    width: 500px;
+    height: 350px;
+    width: 400px;
   }
   .home-content {
     padding: 0 20px; /* Add padding for smaller screens */
