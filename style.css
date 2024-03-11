@@ -1,3 +1,4 @@
+
 /* styles.css */
 
 /* Reset default browser styles */
@@ -148,13 +149,13 @@ section {
 /* Responsive styles */
 @media (max-width: 768px) {
   .home-overlay {
-    height: 350px;
-    width: 400px;
+    height: 450px;
+    width: 100%;
   }
 
   .home-section{
-    height: 350px;
-    width: 400px;
+    height: 450px;
+    width: 100%;
   }
   .home-content {
     padding: 0 20px; /* Add padding for smaller screens */
@@ -197,7 +198,8 @@ section {
   .about-image,
   .about-text {
     max-width: 100%;
-    margin-left: 10;
+    margin-left: 0; /* Adjust spacing */
+    margin-right: 0; /* Adjust spacing */
   }
 
   .about-text {
@@ -209,7 +211,9 @@ section {
 /*//////////////////////////////////////////////////////////////////////////////*/
 
 .products-section {
-  display: flex;
+  display: flex
+
+;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -339,8 +343,8 @@ section {
   align-items: center;
 }
 
-.footer-logo img {
-  width: 100px; /* Adjust size as needed */
+.footer-logo span {
+  font-size: 24px;
 }
 
 .footer-nav ul {
@@ -363,4 +367,20 @@ section {
 
 .social-icons a img {
   width: 30px; /* Adjust size as needed */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
