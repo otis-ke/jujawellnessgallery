@@ -9,7 +9,7 @@
 <body>
     <header>
       <div class="logo-container">
-        <img src="logo.png" alt="Juja Wellness Gallery Logo">
+        <img src="download.png" alt="Juja Wellness Gallery Logo">
       </div>
       <h1>Juja Wellness Center</h1>
       <button class="nav-toggle" aria-label="Toggle navigation">
@@ -28,13 +28,163 @@
     </header>
   
     <main>
-      <!-- Content goes here -->
+
+      <section class="home-section">
+        <div class="home-overlay">
+          <div class="home-content">
+            <h2 style="color: rgb(99, 224, 15);">We Are Juja Wellness Center</h2>
+            <p><big>We offer wellness services and use Prife products to provide solutions </br>
+              and diagnosis to illnesses. Our mission is to promote health and well-being
+              <br> through holistic approaches and personalized care.</big></p>
+          </div>
+        </div>
+      </section>
+<br>
+
+
+
+      <h2 style="align-self: center;"> OUR PRODUCTS</h2> <br>
+     
+      <section class="products">
+        
+        <div class="product">
+          <img src="iteracare.jpg" alt="Product 1">
+          <div class="product-info">
+            <h2>Itera care</h2>
+            <p>Integrates three top technologies– Terahertz, <br>
+               Quantum and Optical Quartz.<br>
+                Its component is cast with more than <br>
+                one hundred trace elements.</p>
+          </div>
+        </div>
+
+      </br>
+        <div class="product">
+          <div class="product-info">
+            <h2>Itera-bio</h2>
+            <p>Helps purify the body, promotes metabolism, <br>
+               removes waste from the body. <br>
+                Clears blockages from inside out.</p>
+          </div>
+          <img src="iterabio.jpg" alt="Product 2">
+        </div>
+<br>
+      </br>
+
+        <div class="product">
+          <img src="water.jpg" alt="Product 3">
+          <div class="product-info">
+            <h2>7 Wonders</h2>
+            <p>For good quality water, <br>
+              there are 7 key factors in determining <br>
+              the quality of water.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="about-section">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="banner.jpg" alt="About Us Image"> 
+              <img src="26e52f93f1a95038cc2f9714fcc7cd7b.png" alt="About Us Image">
+          </div>
+         
+          </div>
+        
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-content">
+          <h2>Contact Us</h2>
+          <p>Get in touch with us for any inquiries or to schedule an appointment.</p>
+          <form class="contact-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      <br>
+        <div class="contact-info">
+        
+          <div class="directions">
+            <h3>Our Location</h3>
+            <br>
+            <p>2nd floor Juja City Mall, Juja Kenya</p>
+            <!-- Add map or direction link here -->
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.9828923137343!2d37.00673231435615!3d-1.1174519991768408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1282a8b843c1%3A0x8963778a0e88a012!2sJuja%20City%20Mall!5e0!3m2!1sen!2ske!4v1647351877671!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+       </div>
+        
+      </section>
+      
+      
+      
+
+
+
+
+
+      
     </main>
-  
-    <footer>
-      <p>&copy; 2024 Juja Wellness Gallery. All rights reserved.</p>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <span>Juja Wellness Gallery</span>
+        </div>
+
+        <br>
+        <div class="footer-links">
+          <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+          <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+          <a href="#"><img src="mail-icon.png" alt="Email"></a>
+          <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+        </div>
+        <br>
+      </br>
+        <p>&copy; 2024 Juja Wellness Gallery. All rights reserved.</p>
+      </div>
+      
     </footer>
-  
+    
+   
+    
+  <script>
+    // script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('nav');
+
+  navToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+  });
+});
+/**/////////////////////////////////////////////////////////////////////////////*/
+document.addEventListener('DOMContentLoaded', function() {
+  const products = document.querySelectorAll('.products-section');
+  const options = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  products.forEach(product => {
+    observer.observe(product);
+  });
+});
+
+  </script>
   
     
 </body>
